@@ -1,68 +1,213 @@
+# 📊 Task Analysis & 📔 Funky Virtual Diary
+
+This repository contains **Task Analysis utilities** along with **Funky Virtual Diary**, a feature-rich desktop diary and productivity tracking application built using **Python** and **PyQt6**.
+
+The project focuses on helping users analyze daily productivity, track habits, manage tasks, and visualize personal progress through interactive analytics.
+
+---
+
 # 📔 Funky Virtual Diary
 
-A feature-rich, desktop-based personal diary application built with **Python** and **PyQt6**. This application allows users to track their daily mood, productivity, tasks, and habits, and visualizes the data over time using interactive graphs.
+A desktop-based personal diary application that allows users to track daily mood, productivity, habits, and planning. The application stores user data and provides graphical insights to help users improve their daily routines and decision-making.
 
-## ✨ Features
+---
 
-* **Daily Reflection:** Log your daily thoughts and reasons for unhappy moments (with importance tagging).
-* **Quantitative Tracking:**
-    * Happiness & Productivity sliders (1-5 scale).
-    * Daily Stats: Nap hours, Meal count, Money spent.
-* **MoSCoW Task Management:** Organize daily tasks into:
-    * **M**ust Have
-    * **S**hould Have
-    * **C**ould Have
-    * **W**on't Have
-* **Future Planning:** Set tasks for tomorrow, define mistakes to avoid, and list personal improvements.
-* **Habit Checklist:** Track daily activities like Coding, Gate Classes, Speaking Skills, Workouts, and Meditation.
-* **Data Persistence:** All entries are automatically saved to a CSV file (`diary_data.csv`).
-* **Visual Analytics:** Built-in "Show Graph" feature that plots your history using **Matplotlib**.
+## ✨ Key Features
 
-## 🛠️ Prerequisites
+### 🧠 Daily Reflection
+- Record daily thoughts and experiences
+- Track reasons for unhappy moments
+- Tag importance of events
 
-To run this application, you need Python installed on your system along with the following libraries:
+---
 
-* PyQt6
-* Pandas
-* Matplotlib
-* Requests
+### 📊 Quantitative Tracking
+- Happiness slider (1–5 scale)
+- Productivity slider (1–5 scale)
+- Track:
+  - Nap hours
+  - Meals consumed
+  - Money spent
 
-## 📦 Installation
+---
 
-1.  **Clone or Download** the project files.
-2.  **Install the dependencies** using pip:
+### ✅ MoSCoW Task Management
+Organize tasks using priority classification:
 
-    ```bash
-    pip install PyQt6 pandas matplotlib requests
-    ```
+- **Must Have**
+- **Should Have**
+- **Could Have**
+- **Won’t Have**
 
-3.  **Run the application**:
+---
 
-    ```bash
-    python main.py
-    ```
+### 🔮 Future Planning
+- Plan tasks for the next day
+- Record mistakes to avoid
+- Define areas for personal improvement
 
-## 🖥️ Usage
+---
 
-### 1. The Dashboard
-The main window is divided into three sections:
-* **Left Panel:** Focuses on current mood, unhappiness analysis, and happiness triggers.
-* **Center Panel:** Displays a motivational "Quote of the Day."
-* **Right Panel:** Focuses on statistical data (naps, money), habits (coding, workout), and planning for tomorrow.
+### 🔁 Habit Tracking
+Daily checklist includes:
 
-### 2. Saving Data
-Fill in the fields and click the **green "Save Entry" button**.
-* This will create a file named `diary_data.csv` in the same directory.
-* If the file already exists, it appends the new entry as a new row.
+- Coding
+- GATE Classes
+- Speaking Skills
+- Workout
+- Meditation
 
-### 3. Visualizing Data
-Click the **blue "Show Graph" button** to generate three windows of analysis:
-1.  **Line Chart:** Compares Happiness vs. Productivity over time.
-2.  **Scatter Plot:** Tracks Nap Hours (highlighting a "Healthy Zone" between 5-8.5 hours).
-3.  **Pie Charts:** Shows the completion percentage of your 5 daily habits (Coding, Meditation, etc.).
+---
 
-## 📂 File Structure
+### 💾 Data Persistence
+- Automatically stores entries in:
+diary_data.csv
 
-* `main.py`: The core application code (paste your Python script here).
-* `diary_data.csv`: Stores your diary entries (Created automatically after the first save).
+- Appends new records instead of overwriting existing data
 
+---
+
+### 📈 Visual Analytics
+
+Includes built-in graph generation using Matplotlib:
+
+1. **Line Chart**
+   - Happiness vs Productivity comparison over time
+
+2. **Scatter Plot**
+   - Nap hour tracking
+   - Highlights healthy sleep zone (5–8.5 hours)
+
+3. **Pie Charts**
+   - Displays habit completion percentage
+
+---
+
+# 🛠️ Tech Stack
+
+## 🖥️ Application
+- Python
+- PyQt6
+
+## 📊 Data & Visualization
+- Pandas
+- Matplotlib
+
+## 🌐 Additional Utilities
+- Requests
+
+---
+
+# 📂 Project Structure
+```
+task_analysis/
+│
+├── main.py # Core application logic
+├── diary_data.csv # Stores user diary entries (auto-generated)
+├── requirements.txt # Python dependency list (if present)
+├── README.md # Project documentation
+│
+├── analysis/ # Task analysis related utilities
+│ ├── data_processing.py
+│ ├── analytics.py
+│ └── helper_functions.py
+│
+├── ui_components/ # PyQt UI design modules
+│ ├── dashboard.py
+│ ├── graphs.py
+│ └── widgets.py
+│
+└── assets/ # Static UI resources
+├── icons/
+└── images/
+```
+
+---
+
+# ⚙️ Prerequisites
+
+Ensure you have Python installed along with the following libraries:
+
+- PyQt6
+- Pandas
+- Matplotlib
+- Requests
+
+---
+
+# 📦 Installation
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/Yashika-28/task_analysis.git
+cd task_analysis
+```
+
+2️⃣ Install Dependencies
+
+```
+pip install PyQt6 pandas matplotlib requests
+```
+
+▶️ Running the Application
+
+```
+python main.py
+```
+
+# 🖥️ Application Usage
+## 🧭 Dashboard Layout
+🔹 Left Panel
+- Mood tracking
+- Unhappiness analysis
+- Happiness triggers
+
+🔹 Center Panel
+- Motivational quote display
+
+🔹 Right Panel
+- Habit tracking
+- Statistical tracking
+- Tomorrow planning section
+
+## 💾 Saving Data
+- Fill all fields
+- Click Save Entry
+- Automatically:
+- Creates diary_data.csv
+- Stores daily data
+
+## 📈 Viewing Graphs
+- Click Show Graph button to open:
+- Happiness/Productivity trend
+- Sleep analytics
+- Habit completion visualization
+
+## 🎯 Project Objectives
+- Improve daily productivity awareness
+- Track emotional and mental well-being
+- Promote structured task management
+- Provide self-improvement insights through data visualization
+
+##🔮 Future Enhancements
+- ☁️ Cloud-based data storage
+- 📱 Mobile version of diary
+- 🧠 AI-based productivity suggestions
+- 🔔 Reminder & notification system
+- 📊 Advanced analytics dashboard
+- 🔐 User authentication and multi-user support
+
+## 🤝 Contributing
+Contributions are welcome!
+- Fork the repository
+- Create a new feature branch
+- Commit changes
+- Push branch
+- Submit Pull Request
+
+## 📜 License
+This project is open-source and intended for educational and productivity enhancement purposes.
+
+## 👩‍💻 Author
+Developed by Yashika
