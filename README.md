@@ -66,10 +66,3 @@ Click the **blue "Show Graph" button** to generate three windows of analysis:
 * `main.py`: The core application code (paste your Python script here).
 * `diary_data.csv`: Stores your diary entries (Created automatically after the first save).
 
-## 🎨 Customization
-
-### Background Image
-The app loads a background image from a specific URL. To change it, find this line in the `__init__` method inside the Python code and replace the URL:
-
-```python
-self.load_background_image("YOUR_IMAGE_URL_HERE")
